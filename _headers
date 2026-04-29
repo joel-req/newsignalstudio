@@ -1,0 +1,40 @@
+# Cloudflare Pages headers for newsignal.studio
+# Format: <path>\n  <Header-Name>: <value>
+
+# Security headers on every response
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# HTML: short cache, must-revalidate so updates ship fast
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Root + directory index documents
+/
+  Cache-Control: public, max-age=300, must-revalidate
+
+# CSS: long-lived, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# SVG assets (favicon, og, inline illustrations)
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# PNG / JPG / WEBP image assets
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+# Operational files (robots, sitemap): short cache
+/robots.txt
+  Cache-Control: public, max-age=3600
+/sitemap.xml
+  Cache-Control: public, max-age=3600

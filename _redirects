@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects for newsignal.studio
+# Format: <from-path>  <to-path>  <status-code>
+# Example: /old-path  /new-path  301
+
+# No redirects yet.
