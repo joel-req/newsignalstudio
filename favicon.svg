@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="NewSignal Studio">
+  <rect x="0" y="0" width="32" height="32" rx="5" fill="#F4ECDD" />
+  <!-- the lock-in mark: dotted alignment ring + steady center dot.
+       Same artifact as the hero's KPI lock, scaled to a brandmark. -->
+  <circle cx="16" cy="16" r="11" fill="none" stroke="#1F1A14" stroke-width="1.6" stroke-dasharray="2 2.4" />
+  <circle cx="16" cy="16" r="3.2" fill="#B8412B" />
+</svg>

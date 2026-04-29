@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .paper { fill: #f6f3ec; }
+      .ink { fill: #14110d; }
+      .ink2 { fill: #3a352c; }
+      .signal { fill: #c8341c; }
+      .rule { stroke: #c9c2b3; stroke-width: 1.5; }
+      .signalstroke { stroke: #c8341c; stroke-width: 2; fill: none; stroke-linecap: square; }
+      .display { font-family: Cambria, "Hoefler Text", "Iowan Old Style", Georgia, serif; font-weight: 400; }
+      .mono    { font-family: "SFMono-Regular", Menlo, Consolas, monospace; letter-spacing: 6px; }
+      .sans    { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 600; letter-spacing: 0.5px; }
+    </style>
+  </defs>
+
+  <!-- paper -->
+  <rect class="paper" x="0" y="0" width="1200" height="630"/>
+
+  <!-- masthead -->
+  <text x="80" y="92" class="mono ink2" font-size="16">VOL. 01 / PERFORMANCE SPRINT</text>
+  <line class="rule" x1="80" y1="118" x2="1120" y2="118"/>
+
+  <!-- typographic mark + wordmark, top right -->
+  <g transform="translate(940 78)">
+    <rect x="0" y="0" width="34" height="34" fill="none" stroke="#14110d" stroke-width="1.5"/>
+    <polyline points="6,28 13,22 21,25 30,8" class="signalstroke"/>
+  </g>
+  <text x="986" y="100" class="sans ink" font-size="20">NewSignal<tspan class="signal">.</tspan>Studio</text>
+
+  <!-- eyebrow -->
+  <text x="80" y="200" class="mono signal" font-size="18">ISSUE NO. 01 &#8226; STANDING OFFER</text>
+
+  <!-- headline (2 lines) -->
+  <text x="80" y="328" class="display ink" font-size="124" letter-spacing="-3">Performance ads</text>
+  <text x="80" y="448" class="display ink" font-size="124" letter-spacing="-3">for high-ticket<tspan class="signal" font-style="italic">.</tspan></text>
+
+  <!-- deck rule + line -->
+  <line class="rule" x1="80" y1="500" x2="540" y2="500"/>
+  <text x="80" y="540" class="display ink2" font-size="28" font-style="italic">We don&#8217;t get paid until your numbers do.</text>
+
+  <!-- footer rule -->
+  <line class="rule" x1="80" y1="582" x2="1120" y2="582"/>
+  <text x="80" y="608" class="mono ink2" font-size="14">NEWSIGNAL.STUDIO</text>
+  <text x="1120" y="608" class="mono ink2" font-size="14" text-anchor="end">A 14-DAY SPRINT &#8226; KPI ON PAPER</text>
+</svg>

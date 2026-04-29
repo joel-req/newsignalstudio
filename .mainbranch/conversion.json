@@ -1,0 +1,10 @@
+{
+  "kind": "appointment_booking",
+  "url": "https://cal.com/joel-requena/1-1-call-joel",
+  "render": "link_out",
+  "metadata": {
+    "provider": "cal.com",
+    "owner": "Joel Requena",
+    "purpose": "1:1 sprint qualification call"
+  }
+}

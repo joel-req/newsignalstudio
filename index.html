@@ -1,14 +1,365 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>NewSignal Studio</title>
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NewSignal Studio. Performance ads for high-ticket services.</title>
+<meta name="description" content="A 14-day performance sprint for high-ticket services. We build the funnel, run the ads, optimize the spend. Miss the KPI, you owe nothing." />
+<link rel="canonical" href="https://newsignal.studio/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://newsignal.studio/" />
+<meta property="og:title" content="NewSignal Studio. Performance ads for high-ticket services." />
+<meta property="og:description" content="A 14-day sprint. We don't get paid until your numbers do. KPI on paper, miss it and you owe nothing." />
+<meta property="og:image" content="/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NewSignal Studio. Performance ads for high-ticket services." />
+<meta name="twitter:description" content="A 14-day sprint. We don't get paid until your numbers do." />
+<meta name="twitter:image" content="/og.png" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NewSignal Studio",
+  "url": "https://newsignal.studio/",
+  "description": "Performance ads for high-ticket services. 14-day sprint with KPI-or-nothing terms.",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Noontide Collective LLC"
+  }
+}
+</script>
 </head>
 <body>
-<h1>NewSignal Studio</h1>
-<p>Site is being built.</p>
+
+<header class="topbar">
+  <a class="wordmark" href="/" aria-label="NewSignal Studio home">
+    <span class="wm-glyph" aria-hidden="true">
+      <svg viewBox="0 0 28 28" width="28" height="28">
+        <circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2.4" />
+        <circle cx="14" cy="14" r="2.4" fill="currentColor" />
+      </svg>
+    </span>
+    <span class="wm-text">NewSignal&nbsp;Studio</span>
+  </a>
+  <a class="topbar-cta" href="https://cal.com/joel-requena/1-1-call-joel" target="_blank" rel="noopener noreferrer">Book a 1:1</a>
+</header>
+
+<main>
+
+  <!-- HERO ============================================ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <p class="eyebrow">A studio inside Noontide Collective.</p>
+        <h1 id="hero-heading">
+          Performance ads<br />
+          for high-ticket services.
+        </h1>
+        <p class="lede">
+          We don't get paid until your numbers do. A 14-day sprint for businesses
+          selling something expensive that already converts when the right person finds it.
+          You pick the KPI. Miss it, you owe nothing. Hit it, we keep going.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn-primary" href="https://cal.com/joel-requena/1-1-call-joel" target="_blank" rel="noopener noreferrer">Book a 1:1 with Joel</a>
+          <a class="btn-secondary" href="#sprint">See if your numbers fit</a>
+        </div>
+
+        <ul class="hero-receipts">
+          <li><span class="r-dot"></span>14-day sprint, fixed scope</li>
+          <li><span class="r-dot"></span>Client covers ad spend only</li>
+          <li><span class="r-dot"></span>KPI on paper before we start</li>
+        </ul>
+      </div>
+
+      <figure class="hero-art" aria-label="A jagged noisy waveform on the left resolving into a single clean steady wave on the right, locking onto a small target dot. The shape of the brand name made visible.">
+        <svg viewBox="0 0 640 360" role="img" aria-hidden="true" class="art-svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <filter id="rough" x="-1%" y="-1%" width="102%" height="102%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3" />
+              <feDisplacementMap in="SourceGraphic" scale="1.1" />
+            </filter>
+            <filter id="rough-fine" x="-1%" y="-1%" width="102%" height="102%">
+              <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="9" />
+              <feDisplacementMap in="SourceGraphic" scale="0.7" />
+            </filter>
+          </defs>
+
+          <!-- baseline -->
+          <line x1="40" y1="180" x2="600" y2="180"
+                stroke="var(--rule-strong)" stroke-width="1" stroke-dasharray="2 4" />
+
+          <!-- noise field (left): one continuous jagged path, no scattered marks -->
+          <path class="noise-path"
+                d="M40 180
+                   L 56 142 L 64 214 L 76 156 L 88 220 L 96 158 L 110 224
+                   L 120 148 L 132 218 L 142 156 L 156 226 L 166 144
+                   L 180 218 L 192 152 L 206 222 L 218 158 L 232 214
+                   L 244 162 L 258 208 L 272 168 L 286 198 L 298 174 L 312 192"
+                fill="none"
+                stroke="var(--ink)"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                filter="url(#rough)" />
+
+          <!-- the lock-in moment: a vertical tick where the signal resolves -->
+          <g class="lock-mark">
+            <line x1="320" y1="120" x2="320" y2="240"
+                  stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="2 3" opacity="0.6" />
+            <text x="320" y="108" text-anchor="middle"
+                  font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+                  font-size="11" letter-spacing="0.16em"
+                  fill="var(--ink-soft)">LOCK</text>
+          </g>
+
+          <!-- clean signal (right): a single confident sine, drawn in one breath -->
+          <path class="clean-wave"
+                d="M312 192
+                   C 326 192, 332 130, 360 130
+                   C 388 130, 394 230, 422 230
+                   C 450 230, 456 130, 484 130
+                   C 512 130, 518 230, 546 230
+                   C 562 230, 568 192, 580 180"
+                fill="none"
+                stroke="var(--ink)"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                filter="url(#rough-fine)" />
+
+          <!-- target ring at the right end of the clean signal (the KPI it locks to) -->
+          <g class="target" transform="translate(580 180)">
+            <circle r="22" fill="none" stroke="var(--ink)" stroke-width="1.6"
+                    stroke-dasharray="2 3" filter="url(#rough-fine)" />
+            <circle r="6" fill="var(--accent)" filter="url(#rough-fine)" />
+          </g>
+
+          <!-- handwritten labels, restrained -->
+          <g class="labels"
+             font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+             font-size="11" letter-spacing="0.14em" fill="var(--ink-soft)">
+            <text x="40" y="282" filter="url(#rough-fine)">NOISE</text>
+            <text x="408" y="282" filter="url(#rough-fine)">CLEAN&nbsp;SIGNAL</text>
+            <text x="556" y="148" filter="url(#rough-fine)">KPI</text>
+          </g>
+
+        </svg>
+        <figcaption class="art-caption">From noise. To one clean signal. Locked to a number.</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- THE PROBLEM (PAS, restrained) ===================== -->
+  <section class="band band-pas" aria-labelledby="pas-heading">
+    <div class="band-inner">
+      <h2 id="pas-heading" class="band-h">Most agencies bill whether you grow or not.</h2>
+      <p class="band-body">
+        You've already paid for strategy decks that didn't move the needle.
+        We don't run another retainer on top of the last one.
+        We run a sprint. KPI on paper. Miss it, you owe nothing.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE SPRINT MECHANISM ============================== -->
+  <section id="sprint" class="band band-mech" aria-labelledby="mech-heading">
+    <div class="band-inner mech-grid">
+
+      <div class="mech-head">
+        <p class="eyebrow eyebrow-on-warm">The 14-day sprint</p>
+        <h2 id="mech-heading">What gets built in two weeks.</h2>
+        <p class="mech-lede">
+          Funnel, creative, and media buying in one engagement. No spreadsheet of "recommendations."
+          No handing the work back. We rebuild the page, write the ads, run the spend.
+        </p>
+      </div>
+
+      <ol class="mech-list" aria-label="Five deliverables in fourteen days">
+        <li>
+          <span class="mech-num">01</span>
+          <div>
+            <h3>About page rebuild</h3>
+            <p>Hero, subhead, structure, copy. The page cold traffic actually lands on.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mech-num">02</span>
+          <div>
+            <h3>VSL script (or rewrite)</h3>
+            <p>The video that does the selling when you can't be on the call.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mech-num">03</span>
+          <div>
+            <h3>Cold-traffic campaign</h3>
+            <p>Five-plus creative variations. Built to find the buyer in a crowd.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mech-num">04</span>
+          <div>
+            <h3>Retargeting campaign</h3>
+            <p>Five-plus creative variations. Built to close the buyer who already looked.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mech-num">05</span>
+          <div>
+            <h3>14 days of media buying</h3>
+            <p>Daily optimization on the spend. Eyes on the numbers every day, not every quarter.</p>
+          </div>
+        </li>
+      </ol>
+
+    </div>
+  </section>
+
+  <!-- THE TERMS (skin in the game) ====================== -->
+  <section class="band band-terms" aria-labelledby="terms-heading">
+    <div class="band-inner">
+      <h2 id="terms-heading" class="band-h">The terms, on a single page.</h2>
+
+      <div class="terms-grid">
+        <article class="term-card">
+          <p class="term-tag">Before</p>
+          <h3>You cover ad spend only.</h3>
+          <p>$1.5K to $3K minimum to get statistical signal. Our fee for the sprint is zero.</p>
+        </article>
+
+        <article class="term-card">
+          <p class="term-tag">During</p>
+          <h3>KPI agreed on the kickoff call.</h3>
+          <p>Cost-per-qualified-lead or cost-per-customer. Your number, written down, before we start spending.</p>
+        </article>
+
+        <article class="term-card term-card-miss">
+          <p class="term-tag">Miss the KPI</p>
+          <h3>You keep everything. You owe nothing.</h3>
+          <p>The page, the ads, the campaigns, the data. They stay yours. We walk.</p>
+        </article>
+
+        <article class="term-card term-card-hit">
+          <p class="term-tag">Hit the KPI</p>
+          <h3>You pick Path A or Path B.</h3>
+          <p><strong>Path A.</strong> Handoff. Flat fee around $10K to $15K. We finalize, train your team, walk away.</p>
+          <p><strong>Path B.</strong> Performance partnership. Aligned incentives, structure depends on what you sell. Negotiated per client.</p>
+        </article>
+      </div>
+
+      <p class="terms-foot">
+        We don't promise revenue. We promise a controlled cost-per-acquisition and risk reversal.
+      </p>
+    </div>
+  </section>
+
+  <!-- THREE REASONS ===================================== -->
+  <section class="band band-three" aria-labelledby="three-heading">
+    <div class="band-inner">
+      <h2 id="three-heading" class="band-h">Why this works.</h2>
+      <div class="three-grid">
+
+        <article class="three-card">
+          <span class="three-mark" aria-hidden="true">i.</span>
+          <h3>Aligned skin in the game.</h3>
+          <p>Most agencies bill whether you grow or not. We bill on hit. Your KPI, your terms.</p>
+        </article>
+
+        <article class="three-card">
+          <span class="three-mark" aria-hidden="true">ii.</span>
+          <h3>One sprint, three jobs.</h3>
+          <p>Funnel, creative, and media buying in a single engagement. No vendor stack to manage.</p>
+        </article>
+
+        <article class="three-card">
+          <span class="three-mark" aria-hidden="true">iii.</span>
+          <h3>Two clean exits.</h3>
+          <p>After 14 days you either own the system or keep us running it. No retainers without proof.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR =================================== -->
+  <section class="band band-fit" aria-labelledby="fit-heading">
+    <div class="band-inner fit-grid">
+      <div>
+        <p class="eyebrow">Honest fit check.</p>
+        <h2 id="fit-heading">Who the sprint is built for.</h2>
+      </div>
+
+      <ul class="fit-list">
+        <li><span class="fit-tick">+</span> Your average customer is worth more than $2K, often much more.</li>
+        <li><span class="fit-tick">+</span> Your offer already converts when the right person finds it.</li>
+        <li><span class="fit-tick">+</span> You have $1.5K to $3K in real ad budget to put behind it.</li>
+        <li><span class="fit-tick">+</span> You don't want to learn media buying. You want someone competent running it.</li>
+        <li><span class="fit-tick">&minus;</span> You're selling a $50 product or a low-ticket subscription. Different math.</li>
+        <li><span class="fit-tick">&minus;</span> You don't have an offer yet. We can't sprint a hypothesis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CLOSE / CTA ======================================= -->
+  <section class="band band-close" aria-labelledby="close-heading">
+    <div class="band-inner close-inner">
+
+      <svg viewBox="0 0 360 120" class="close-mark" role="img" aria-label="A small repeat of the signal locking onto a target.">
+        <defs>
+          <filter id="rough3" x="-2%" y="-2%" width="104%" height="104%">
+            <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="11" />
+            <feDisplacementMap in="SourceGraphic" scale="0.7" />
+          </filter>
+        </defs>
+        <g filter="url(#rough3)">
+          <path d="M20 60
+                   L 32 38 L 40 82 L 50 44 L 60 80 L 70 46 L 82 78 L 92 50 L 104 74 L 116 56 L 128 68"
+                fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M128 68
+                   C 142 68, 148 26, 172 26
+                   C 196 26, 202 94, 226 94
+                   C 250 94, 256 26, 280 26
+                   C 304 26, 310 60, 320 60"
+                fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="320" cy="60" r="14" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-dasharray="2 3" />
+          <circle cx="320" cy="60" r="4" fill="var(--accent)" />
+        </g>
+      </svg>
+
+      <h2 id="close-heading">One call. We tell you if your numbers fit.</h2>
+      <p class="close-lede">
+        Bring your offer, your average order value, and what you've already tried.
+        We'll tell you whether a sprint can hit a number you'd actually pay for.
+      </p>
+
+      <a class="btn-primary btn-primary-lg" href="https://cal.com/joel-requena/1-1-call-joel" target="_blank" rel="noopener noreferrer">Book a 1:1 with Joel</a>
+      <p class="close-mini">No deck. No pitch. A working call.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    A product of <strong>Noontide Collective LLC</strong> ·
+    <a href="/privacy/">Privacy</a> ·
+    <a href="/terms/">Terms</a> ·
+    <a href="mailto:hello@noontide.co">Contact</a>
+  </p>
+</footer>
+
 </body>
 </html>
-<!-- triggering CF deploy -->
