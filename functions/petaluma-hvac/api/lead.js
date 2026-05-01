@@ -61,24 +61,42 @@ export async function onRequestPost(context) {
     `<i>Time: ${new Date().toISOString()}</i>`
   ];
 
-  const tgUrl = `https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`;
-  const tgRes = await fetch(tgUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: env.TELEGRAM_CHAT_ID,
-      text: lines.join('\n'),
-      parse_mode: 'HTML',
-      disable_web_page_preview: true
-    })
-  });
+  const token = env.TELEGRAM_BOT_TOKEN.trim();
+  const chatId = env.TELEGRAM_CHAT_ID.trim();
+  const tgUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
-  if (!tgRes.ok) {
-    const detail = await tgRes.text();
-    return jsonResponse(502, { error: 'telegram send failed', detail });
+  try {
+    const tgRes = await fetch(tgUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: lines.join('\n'),
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
+      })
+    });
+
+    if (!tgRes.ok) {
+      const detail = await tgRes.text();
+      return jsonResponse(502, {
+        error: 'telegram send failed',
+        status: tgRes.status,
+        detail,
+        token_length: token.length,
+        chat_id_value: chatId
+      });
+    }
+
+    return jsonResponse(200, { ok: true });
+  } catch (err) {
+    return jsonResponse(500, {
+      error: 'fetch threw',
+      message: String(err && err.message || err),
+      token_length: token.length,
+      chat_id_value: chatId
+    });
   }
-
-  return jsonResponse(200, { ok: true });
 }
 
 export async function onRequest(context) {
