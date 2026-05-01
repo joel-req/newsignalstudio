@@ -1,8 +1,4 @@
 // Cloudflare Pages Function — POST /petaluma-hvac/api/lead
-// Receives a lead form submission and forwards it to Telegram.
-// Env vars (set in Cloudflare Pages → Settings → Environment variables):
-//   TELEGRAM_BOT_TOKEN  — secret bot token from @BotFather
-//   TELEGRAM_CHAT_ID    — chat or group ID where messages should land
 
 const REQUIRED_FIELDS = ['name', 'business', 'phone', 'email', 'zip'];
 
@@ -21,80 +17,86 @@ function jsonResponse(status, body) {
 }
 
 export async function onRequestPost(context) {
-  const { request, env } = context;
-
-  if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) {
-    // Diagnostic: list env keys (NO VALUES) so we can see what the function actually receives.
-    const keys = Object.keys(env || {}).sort();
-    return jsonResponse(500, {
-      error: 'telegram env vars not configured',
-      env_keys_visible_to_function: keys,
-      has_TELEGRAM_BOT_TOKEN: 'TELEGRAM_BOT_TOKEN' in env,
-      has_TELEGRAM_CHAT_ID: 'TELEGRAM_CHAT_ID' in env,
-      chat_id_value_if_present: typeof env.TELEGRAM_CHAT_ID === 'string' ? env.TELEGRAM_CHAT_ID : null
-    });
-  }
-
-  let data;
   try {
-    data = await request.json();
-  } catch (e) {
-    return jsonResponse(400, { error: 'invalid json' });
-  }
+    const { request, env } = context;
 
-  for (const field of REQUIRED_FIELDS) {
-    if (!data[field] || typeof data[field] !== 'string' || data[field].trim() === '') {
-      return jsonResponse(400, { error: `missing field: ${field}` });
+    if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) {
+      const keys = Object.keys(env || {}).sort();
+      return jsonResponse(500, {
+        error: 'telegram env vars not configured',
+        env_keys_visible_to_function: keys
+      });
     }
-  }
 
-  const lines = [
-    '🛠 <b>New Petaluma HVAC lead</b>',
-    '',
-    `<b>Name:</b> ${escapeHtml(data.name)}`,
-    `<b>Business:</b> ${escapeHtml(data.business)}`,
-    `<b>Phone:</b> ${escapeHtml(data.phone)}`,
-    `<b>Email:</b> ${escapeHtml(data.email)}`,
-    `<b>ZIP:</b> ${escapeHtml(data.zip)}`,
-    '',
-    `<i>Source: ${escapeHtml(data.source || 'petaluma-hvac-lander')}</i>`,
-    `<i>Time: ${new Date().toISOString()}</i>`
-  ];
+    let data;
+    try {
+      data = await request.json();
+    } catch (e) {
+      return jsonResponse(400, { error: 'invalid json' });
+    }
 
-  const token = env.TELEGRAM_BOT_TOKEN.trim();
-  const chatId = env.TELEGRAM_CHAT_ID.trim();
-  const tgUrl = `https://api.telegram.org/bot${token}/sendMessage`;
+    for (const field of REQUIRED_FIELDS) {
+      if (!data[field] || typeof data[field] !== 'string' || data[field].trim() === '') {
+        return jsonResponse(400, { error: 'missing field: ' + field });
+      }
+    }
 
-  try {
-    const tgRes = await fetch(tgUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: lines.join('\n'),
-        parse_mode: 'HTML',
-        disable_web_page_preview: true
-      })
-    });
+    const lines = [
+      '🛠 <b>New Petaluma HVAC lead</b>',
+      '',
+      '<b>Name:</b> ' + escapeHtml(data.name),
+      '<b>Business:</b> ' + escapeHtml(data.business),
+      '<b>Phone:</b> ' + escapeHtml(data.phone),
+      '<b>Email:</b> ' + escapeHtml(data.email),
+      '<b>ZIP:</b> ' + escapeHtml(data.zip),
+      '',
+      '<i>Source: ' + escapeHtml(data.source || 'petaluma-hvac-lander') + '</i>',
+      '<i>Time: ' + new Date().toISOString() + '</i>'
+    ];
+
+    const token = String(env.TELEGRAM_BOT_TOKEN).trim();
+    const chatId = String(env.TELEGRAM_CHAT_ID).trim();
+    const tgUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
+
+    let tgRes;
+    try {
+      tgRes = await fetch(tgUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: lines.join('\n'),
+          parse_mode: 'HTML',
+          disable_web_page_preview: true
+        })
+      });
+    } catch (fetchErr) {
+      return jsonResponse(500, {
+        error: 'fetch threw',
+        message: String(fetchErr && fetchErr.message || fetchErr),
+        token_length: token.length,
+        chat_id_value: chatId
+      });
+    }
 
     if (!tgRes.ok) {
-      const detail = await tgRes.text();
+      let detail = '';
+      try { detail = await tgRes.text(); } catch (e) { detail = '(could not read)'; }
       return jsonResponse(502, {
         error: 'telegram send failed',
         status: tgRes.status,
-        detail,
+        detail: detail,
         token_length: token.length,
         chat_id_value: chatId
       });
     }
 
     return jsonResponse(200, { ok: true });
-  } catch (err) {
+  } catch (outerErr) {
     return jsonResponse(500, {
-      error: 'fetch threw',
-      message: String(err && err.message || err),
-      token_length: token.length,
-      chat_id_value: chatId
+      error: 'handler threw',
+      message: String(outerErr && outerErr.message || outerErr),
+      stack: String(outerErr && outerErr.stack || '')
     });
   }
 }
