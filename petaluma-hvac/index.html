@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Petaluma HVAC — Top 3 in Google Maps in 90 Days. Refund If We Miss.</title>
+<meta name="description" content="A 90-day performance sprint for HVAC operators in Petaluma. Top 3 in Google's local pack plus qualified calls. $1,500. Full refund if we miss." />
+<link rel="canonical" href="https://newsignal.studio/petaluma-hvac/" />
+<meta name="robots" content="noindex" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://newsignal.studio/petaluma-hvac/" />
+<meta property="og:title" content="Petaluma HVAC — Top 3 in Google Maps in 90 Days. Refund If We Miss." />
+<meta property="og:description" content="A 90-day performance sprint for Petaluma HVAC operators. $1,500. Full refund if we miss." />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --ink-mute: #888;
+    --paper: #fafaf7;
+    --paper-warm: #f3efe6;
+    --rule: #e6e2d6;
+    --rule-strong: #c8c2b0;
+    --accent: #c44d2e;
+    --hit: #2d6a3d;
+    --miss: #b34a3a;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero { padding: 56px 0 40px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    letter-spacing: -0.01em;
+  }
+  h1 .accent { color: var(--accent); }
+  .lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 0 0 26px;
+    max-width: 580px;
+  }
+  .cta-primary {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 14px 26px;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .cta-primary:hover { background: var(--accent); }
+  .cta-mini {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin: 12px 0 0;
+    letter-spacing: 0.04em;
+  }
+
+  /* SECTIONS */
+  section { padding: 44px 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: clamp(22px, 3.6vw, 30px);
+    margin: 0 0 22px;
+    letter-spacing: -0.005em;
+    line-height: 1.2;
+  }
+
+  /* MECHANISM — tight one-liners */
+  .mechanism ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mechanism li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+    padding: 12px 0;
+    border-top: 1px dashed var(--rule);
+    align-items: baseline;
+  }
+  .mechanism li:first-child { border-top: none; }
+  .mech-num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+  .mechanism .mech-text { font-size: 16px; }
+  .mechanism strong { font-weight: 600; }
+
+  /* TERMS */
+  .terms {
+    background: var(--paper-warm);
+    padding: 44px 0;
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  @media (max-width: 600px) {
+    .terms-grid { grid-template-columns: 1fr; gap: 10px; }
+  }
+  .term-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 16px;
+    border-radius: 2px;
+  }
+  @media (max-width: 600px) {
+    .term-card { padding: 14px; }
+  }
+  .term-tag {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 6px;
+  }
+  .term-card h3 {
+    font-size: 16px;
+    margin: 0 0 6px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  @media (max-width: 600px) {
+    .term-card h3 { font-size: 15.5px; }
+  }
+  .term-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .term-miss { border-color: var(--miss); }
+  .term-miss .term-tag { color: var(--miss); }
+  .term-hit { border-color: var(--hit); }
+  .term-hit .term-tag { color: var(--hit); }
+
+  /* SCOPE */
+  .scope { background: #faf8f3; }
+  .scope-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 14px;
+  }
+  @media (max-width: 600px) {
+    .scope-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+  .scope ul { list-style: none; padding: 0; margin: 0; }
+  .scope li { padding: 6px 0; font-size: 15.5px; color: var(--ink-soft); }
+  .scope-tick {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--hit);
+    margin-right: 10px;
+    font-weight: 700;
+  }
+  .scope-cross {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--miss);
+    margin-right: 10px;
+    font-weight: 700;
+  }
+  .scope-col h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    font-weight: 600;
+  }
+
+  /* TEAM */
+  .team-photo {
+    width: 100%;
+    max-width: 540px;
+    aspect-ratio: 3 / 2;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    display: block;
+    object-fit: cover;
+    margin: 18px auto 28px;
+  }
+  .team-bios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    .team-bios { grid-template-columns: 1fr; gap: 18px; }
+  }
+  .team-bio-item { text-align: left; }
+  .team-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 2px;
+  }
+  .team-role {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 6px;
+  }
+  .team-bio {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  /* FIT */
+  .fit ul { list-style: none; padding: 0; margin: 0; }
+  .fit li {
+    padding: 9px 0;
+    border-top: 1px dashed var(--rule);
+    font-size: 15.5px;
+  }
+  .fit li:first-child { border-top: none; }
+
+  /* FORM */
+  .form-section { background: #faf8f3; }
+  .lead-form {
+    margin-top: 20px;
+    display: grid;
+    gap: 14px;
+    max-width: 520px;
+  }
+  .lead-form label {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 6px;
+  }
+  .lead-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper);
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .lead-form input:focus {
+    outline: none;
+    border-color: var(--ink);
+  }
+  .form-error {
+    font-size: 13px;
+    color: var(--miss);
+    margin: 4px 0 0;
+    min-height: 16px;
+  }
+
+  /* CLOSE */
+  .close { text-align: center; padding: 56px 0 64px; }
+  .close h2 { margin-bottom: 12px; }
+  .close .lede { margin: 0 auto 24px; text-align: center; }
+  .cta-primary-lg { padding: 16px 32px; font-size: 17px; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 24px 0 32px;
+    font-size: 13px;
+    color: var(--ink-mute);
+    text-align: center;
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; margin: 0 8px; }
+</style>
+</head>
+
+<body>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Petaluma HVAC operators</p>
+      <h1>
+        Top 3 in Google Maps + qualified calls in Petaluma (and Sonoma County) within <span class="accent">90 days</span>. <span class="accent">$1,500</span>. <span class="accent">Full refund if we miss.</span>
+      </h1>
+      <p class="lede">
+        Local 3-pack ranking and real homeowner calls. One fee. One deadline.
+      </p>
+      <a class="cta-primary" href="#apply">Apply for the 90-day sprint</a>
+      <p class="cta-mini">15-min fit call. No deck, no pitch.</p>
+    </div>
+  </section>
+
+  <section class="mechanism">
+    <div class="wrap">
+      <p class="eyebrow">What's included</p>
+      <h2>Five things in 90 days.</h2>
+      <ol>
+        <li><span class="mech-num">01</span><div class="mech-text"><strong>GBP cleanup + ongoing optimization.</strong> The work most local HVACs skip.</div></li>
+        <li><span class="mech-num">02</span><div class="mech-text"><strong>Citations across 40 directories.</strong> Yelp, Angi, BBB, Nextdoor, the rest.</div></li>
+        <li><span class="mech-num">03</span><div class="mech-text"><strong>Petaluma landing page we host.</strong> Tied to your GBP. Yours to keep.</div></li>
+        <li><span class="mech-num">04</span><div class="mech-text"><strong>Google Ads search campaign.</strong> Tight Petaluma geo. Real negatives.</div></li>
+        <li><span class="mech-num">05</span><div class="mech-text"><strong>Weekly ranking + call reports.</strong> Every call tracked, recorded, tagged.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="terms">
+    <div class="wrap">
+      <p class="eyebrow">The terms</p>
+      <h2>What you pay. What happens if we miss.</h2>
+
+      <div class="terms-grid">
+        <article class="term-card">
+          <p class="term-tag">Day zero</p>
+          <h3>$1,500 up front.</h3>
+          <p>One fee. No retainer. No upsells.</p>
+        </article>
+
+        <article class="term-card">
+          <p class="term-tag">Day 90 — the goal</p>
+          <h3>Top 3 in Google's local pack + qualified calls.</h3>
+          <p>Real homeowners in your area. Not telemarketers.</p>
+        </article>
+
+        <article class="term-card term-miss">
+          <p class="term-tag">If we miss</p>
+          <h3>Full refund.</h3>
+          <p>You keep the GBP work, the citations, the page.</p>
+        </article>
+
+        <article class="term-card term-hit">
+          <p class="term-tag">If we hit</p>
+          <h3>You decide what's next.</h3>
+          <p>Keep us, take it in-house, or stop. No lock-in.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="scope">
+    <div class="wrap">
+      <p class="eyebrow">Scope is sharp on purpose</p>
+      <h2>What's in. What isn't.</h2>
+
+      <div class="scope-grid">
+        <div class="scope-col">
+          <h3>Included</h3>
+          <ul>
+            <li><span class="scope-tick">+</span> GBP setup + optimization</li>
+            <li><span class="scope-tick">+</span> 40-directory citations</li>
+            <li><span class="scope-tick">+</span> Hosted Petaluma landing page</li>
+            <li><span class="scope-tick">+</span> Google Ads search campaign</li>
+            <li><span class="scope-tick">+</span> Call tracking + recording</li>
+            <li><span class="scope-tick">+</span> Weekly ranking + call reports</li>
+            <li><span class="scope-tick">+</span> Automated GBP review replies</li>
+          </ul>
+        </div>
+        <div class="scope-col">
+          <h3>Not included</h3>
+          <ul>
+            <li><span class="scope-cross">–</span> Facebook / Instagram / TikTok ads</li>
+            <li><span class="scope-cross">–</span> Social media posting</li>
+            <li><span class="scope-cross">–</span> Answering your phone</li>
+            <li><span class="scope-cross">–</span> CRM / dispatch tools</li>
+            <li><span class="scope-cross">–</span> Your existing website</li>
+            <li><span class="scope-cross">–</span> Review-solicitation campaigns</li>
+            <li><span class="scope-cross">–</span> Revenue / closed-job guarantees</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap">
+      <p class="eyebrow">Who you're working with</p>
+      <h2>Three operators. One sprint.</h2>
+
+      <img class="team-photo" src="team.png" alt="Joel, Devon, and Matt" loading="lazy" />
+
+      <div class="team-bios">
+        <article class="team-bio-item">
+          <p class="team-name">Devon</p>
+          <p class="team-role">Local SEO + Google Ads</p>
+          <p class="team-bio">Lives in Sonoma County. Ten years running Google Ads and local SEO. Built systems for Cal HD and a stack of other operators.</p>
+        </article>
+
+        <article class="team-bio-item">
+          <p class="team-name">Joel</p>
+          <p class="team-role">Performance + Funnel</p>
+          <p class="team-bio">Spaniard from Barcelona. Has driven campaigns that did six figures inside their first week. Owns the funnel and the numbers.</p>
+        </article>
+
+        <article class="team-bio-item">
+          <p class="team-name">Matt</p>
+          <p class="team-role">Operator advisor</p>
+          <p class="team-bio">Built an eight-figure ecommerce company. Family's been in HVAC and plumbing for decades. He gets the trade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="fit">
+    <div class="wrap">
+      <p class="eyebrow">Honest fit check</p>
+      <h2>Who this is for.</h2>
+      <ul>
+        <li>You run an HVAC or HVAC + plumbing business in or near Petaluma.</li>
+        <li>You (or someone on your team) answers the phone. We make it ring.</li>
+        <li>You can take 10–30 new jobs over a quarter without breaking ops.</li>
+        <li>You're tired of paying agencies that can't show a single ranking move.</li>
+        <li>You don't want to manage a vendor stack. One contact, one report.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="apply" class="form-section">
+    <div class="wrap">
+      <p class="eyebrow">Apply for the 90-day sprint</p>
+      <h2>Tell us about your business. Then book the call.</h2>
+      <p class="lede">Two minutes here, then 15 on a call. We'll tell you straight whether your market is realistic in 90 days.</p>
+
+      <form id="leadForm" class="lead-form" novalidate>
+        <div>
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+        <div>
+          <label for="business">Business name</label>
+          <input type="text" id="business" name="business" required autocomplete="organization" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+        <div>
+          <label for="zip">Service area ZIP</label>
+          <input type="text" id="zip" name="zip" required autocomplete="postal-code" inputmode="numeric" />
+        </div>
+        <button type="submit" class="cta-primary cta-primary-lg">Continue to booking →</button>
+        <p id="formError" class="form-error"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    A service of <strong>NewSignal Studio</strong>, a Noontide Collective company ·
+    <a href="/privacy/">Privacy</a> ·
+    <a href="/terms/">Terms</a> ·
+    <a href="mailto:hello@noontide.co">Contact</a>
+  </p>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('leadForm');
+    var errorEl = document.getElementById('formError');
+    var calBase = 'https://cal.com/joel-requena/call-with-joel-petaluma-hvac';
+    var WEBHOOK_URL = '/petaluma-hvac/api/lead';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.textContent = '';
+
+      var data = {
+        name: form.name.value.trim(),
+        business: form.business.value.trim(),
+        phone: form.phone.value.trim(),
+        email: form.email.value.trim(),
+        zip: form.zip.value.trim(),
+        source: 'petaluma-hvac-lander',
+        ts: new Date().toISOString()
+      };
+
+      if (!data.name || !data.business || !data.phone || !data.email || !data.zip) {
+        errorEl.textContent = 'Please fill out every field.';
+        return;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(data.email)) {
+        errorEl.textContent = 'That email looks off. Double-check?';
+        return;
+      }
+
+      try { localStorage.setItem('petaluma_hvac_lead', JSON.stringify(data)); } catch (e) {}
+
+      var redirect = function () {
+        var params = new URLSearchParams({
+          name: data.name,
+          email: data.email,
+          'metadata[business]': data.business,
+          'metadata[phone]': data.phone,
+          'metadata[zip]': data.zip,
+          'metadata[source]': 'petaluma-hvac-lander'
+        });
+        window.location.href = calBase + '?' + params.toString();
+      };
+
+      // Fire-and-forget: keepalive lets the fetch complete after navigation.
+      // We don't wait for the response — user gets to Cal.com immediately.
+      if (WEBHOOK_URL) {
+        try {
+          fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+            keepalive: true
+          }).catch(function () { /* swallow — localStorage has the backup */ });
+        } catch (e) { /* same */ }
+      }
+      redirect();
+    });
+  })();
+</script>
+
+</body>
+</html>
