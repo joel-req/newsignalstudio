@@ -24,7 +24,15 @@ export async function onRequestPost(context) {
   const { request, env } = context;
 
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) {
-    return jsonResponse(500, { error: 'telegram env vars not configured' });
+    // Diagnostic: list env keys (NO VALUES) so we can see what the function actually receives.
+    const keys = Object.keys(env || {}).sort();
+    return jsonResponse(500, {
+      error: 'telegram env vars not configured',
+      env_keys_visible_to_function: keys,
+      has_TELEGRAM_BOT_TOKEN: 'TELEGRAM_BOT_TOKEN' in env,
+      has_TELEGRAM_CHAT_ID: 'TELEGRAM_CHAT_ID' in env,
+      chat_id_value_if_present: typeof env.TELEGRAM_CHAT_ID === 'string' ? env.TELEGRAM_CHAT_ID : null
+    });
   }
 
   let data;
