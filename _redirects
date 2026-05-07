@@ -2,4 +2,8 @@
 # Format: <from-path>  <to-path>  <status-code>
 # Example: /old-path  /new-path  301
 
-# No redirects yet.
+# Petaluma HVAC lander migrated to rankedhvac.com (noontide-co/new-signal-studio#40 Phase 0)
+# Page-load paths only — leave /petaluma-hvac/api/* alone so any in-flight form submit
+# from a stale browser session still hits the existing Pages Function.
+/petaluma-hvac    https://rankedhvac.com/petaluma/    301
+/petaluma-hvac/   https://rankedhvac.com/petaluma/    301
